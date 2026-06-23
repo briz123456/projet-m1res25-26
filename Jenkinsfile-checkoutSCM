@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clean workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+        stage('Checkout SCM') {
+            steps {
+                sh 'git clone https://github.com/briz123456/projet-m1res25-26.git'
+            }
+        }
+    }
+}
